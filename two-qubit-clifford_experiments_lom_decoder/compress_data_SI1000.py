@@ -55,8 +55,12 @@ circuits = [
 ]
 EXPERIMENTS = list(range(len(circuits)))
 
-NUM_FAILURES = np.zeros((len(EXPERIMENTS), len(BASES), len(FRAMES), len(DISTANCES), len(PROBS)))
-NUM_SAMPLES = np.zeros((len(EXPERIMENTS), len(BASES), len(FRAMES), len(DISTANCES), len(PROBS)))
+NUM_FAILURES = np.zeros(
+    (len(EXPERIMENTS), len(BASES), len(FRAMES), len(DISTANCES), len(PROBS))
+)
+NUM_SAMPLES = np.zeros(
+    (len(EXPERIMENTS), len(BASES), len(FRAMES), len(DISTANCES), len(PROBS))
+)
 
 for i, experiment_name in enumerate(EXPERIMENTS):
     for j, basis in enumerate(BASES):
@@ -64,23 +68,25 @@ for i, experiment_name in enumerate(EXPERIMENTS):
             for l, distance in enumerate(DISTANCES):
                 for m, prob in enumerate(PROBS):
                     file_name = NAME_FORMAT.format(
-                       exp_name=experiment_name,
-                       noise_model=NOISE_MODEL.__name__,
-                       distance=distance,
-                       basis=basis,
-                       frame=frame,
-                       prob=prob,                       
-                       decoder=DECODER.__name__,       
+                        exp_name=experiment_name,
+                        noise_model=NOISE_MODEL.__name__,
+                        distance=distance,
+                        basis=basis,
+                        frame=frame,
+                        prob=prob,
+                        decoder=DECODER.__name__,
                     )
 
                     if not (DATA_DIR / file_name).exists():
-                        #print(DATA_DIR / file_name)
+                        # print(DATA_DIR / file_name)
                         continue
-                        
+
                     try:
-                        num_failures, num_samples, extra = read_failures_from_file(DATA_DIR / file_name)
-                        NUM_FAILURES[i,j,k,l,m] = num_failures
-                        NUM_SAMPLES[i,j,k,l,m] = num_samples
+                        num_failures, num_samples, extra = read_failures_from_file(
+                            DATA_DIR / file_name
+                        )
+                        NUM_FAILURES[i, j, k, l, m] = num_failures
+                        NUM_SAMPLES[i, j, k, l, m] = num_samples
                     except:
                         print("BAD - ", DATA_DIR / file_name)
 

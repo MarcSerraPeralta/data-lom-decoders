@@ -354,14 +354,14 @@ def multiround_bootstrap_plot(
 
     axis.set_xlabel(r"$p_{\rm th}$")
     axis.set_ylabel("Density")
-    #axis.legend(
+    # axis.legend(
     #    loc="upper center",
     #    ncol=2,
     #    bbox_to_anchor=(0.5, 1.125),
     #    columnspacing=0.85,
     #    handletextpad=0.55,
     #    fontsize=7,
-    #)
+    # )
     axis.legend(loc="upper right", fontsize=7)
 
     if (np.max(resamples) - np.min(resamples)) < 1e-5:
