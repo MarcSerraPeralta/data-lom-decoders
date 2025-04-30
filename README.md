@@ -19,6 +19,7 @@ The experiments are simulated under two noise models:
 The directories ending with "_decoder" contain the logical error probabilities for that decoder.
 To obtain the data, run the scripts in the following order (for e.g. SI1000 noise):
 ```
+# first install the required dependencies: pip install -r requirements.txt
 decode_experiment_SI1000.py
 compress_data_SI1000.py
 ```
