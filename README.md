@@ -4,7 +4,8 @@ This repository contains the
 - scripts to generate the data
 - the data
 - and the jupyter notebooks to plot the data
-for the project about the Logical Observable Matching (LOM) decoders.
+
+for the project about the Logical Observable Matching (LOM) decoders for decoding across transversal gates in the surface code. 
 
 There are two sets of experiments:
 - repeated-gate experiments
