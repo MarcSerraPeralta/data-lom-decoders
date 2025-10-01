@@ -11,7 +11,7 @@ from surface_sim.circuit_blocks.unrot_surface_code_css import gate_to_iterator
 from surface_sim.layouts import unrot_surface_codes
 from qec_util.performance import sample_failures
 
-from somatching import SoMatching
+from lomatching import MoMatching
 
 
 # INPUTS
@@ -43,7 +43,7 @@ NOISE_MODEL = SI1000NoiseModel
 BASES = ["Z", "X"]
 FRAMES = ["pre-gate"]
 NUM_QEC_PER_GATE = 1
-DECODER = SoMatching
+DECODER = MoMatching
 
 # DATA STORAGE
 NAME_FORMAT = "{exp_name}_{noise_model}_{decoder}_d{distance}_b{basis}_f{frame}_s0_ncycle-{ncycle}_p{prob:0.10f}.txt"
