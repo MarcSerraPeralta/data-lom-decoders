@@ -1,7 +1,7 @@
 jupyterlab==4.4.1
 numpy==2.2.5
 scipy==1.15.2
-lomatching==0.1.0
+lomatching==0.2.2
 surface-sim==0.8.0
 qec-util==0.4.1
 mle-decoder==0.1.0
