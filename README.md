@@ -5,7 +5,23 @@ This repository contains the
 - the data
 - and the jupyter notebooks to plot the data
 
-for the project about the Logical Observable Matching (LOM) decoders for decoding across transversal gates in the surface code. 
+for the project about the Logical Observable Matching (LOM) decoders for decoding across transversal gates in the surface code:
+```
+@article{lomatching,
+  title = {Decoding across Transversal Clifford Gates in the Surface Code},
+  author = {Serra-Peralta, Marc and Shaw, Mackenzie H. and Terhal, Barbara M.},
+  journal = {PRX Quantum},
+  volume = {7},
+  issue = {1},
+  pages = {010335},
+  numpages = {41},
+  year = {2026},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/sk5y-25b1},
+  url = {https://link.aps.org/doi/10.1103/sk5y-25b1}
+}
+```
 
 There are two sets of experiments:
 - repeated-gate experiments
